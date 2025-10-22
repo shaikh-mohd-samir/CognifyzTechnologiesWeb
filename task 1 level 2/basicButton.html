@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Button Color Change</title>
+  <style>
+    #colorButton {
+      padding: 12px 24px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      background-color: teal;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+  </style>
+</head>
+<body>
+  <center><button id="colorButton">Click Me</button></center>
+
+  <script>
+    const button = document.getElementById("colorButton");
+
+    button.addEventListener("click", function () {
+      const randomColor = "#" + Math.floor(Math.random()*16777215).toString(16);
+      button.style.backgroundColor = randomColor;
+    });
+  </script>
+</body>
+</html>
